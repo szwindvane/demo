@@ -1,0 +1,7 @@
+harnessApiVersion: '1.0'
+type: JENKINS
+artifactPaths:
+- target/gs-rest-service-0.1.0.jar
+jobName: CMCCAdmin
+metadataOnly: false
+serverName: zzw-jenkins
