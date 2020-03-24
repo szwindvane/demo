@@ -26,6 +26,35 @@ phases:
         sweepingOutputName: jenkins
         sweepingOutputScope: PIPELINE
         timeoutMillis: 600000
+    - type: SHELL_SCRIPT
+      name: Shell Script
+      properties:
+        commandPath: null
+        connectionAttributes: null
+        executeOnDelegate: true
+        host: null
+        outputVars: ''
+        publishAsVar: false
+        scriptString: |-
+          echo "buildDisplayName: " ${Jenkins.buildDisplayName}
+
+          echo "jobStatus: " ${Jenkins.jobStatus}
+
+          echo "buildUrl: " ${Jenkins.buildUrl}
+
+          echo "buildFullDisplayName: " ${Jenkins.buildFullDisplayName}
+
+          echo "buildNumber: " ${Jenkins.buildNumber}
+
+          echo "description: " ${Jenkins.description}
+        scriptType: BASH
+        sshKeyRef: null
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: ''
+        templateExpressions: null
+        templateVariables: ''
+        timeoutMillis: 60000
     stepsInParallel: false
   - type: COLLECT_ARTIFACT
     name: Collect Artifact
