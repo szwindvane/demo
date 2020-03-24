@@ -15,6 +15,17 @@ phases:
   phaseSteps:
   - type: PREPARE_STEPS
     name: Prepare Steps
+    steps:
+    - type: JENKINS
+      name: Jenkins
+      properties:
+        jenkinsConfigId: YM_5M7r3RPKhL1-Qo-sc-w
+        jobName: CMCCAdmin
+        jobNameAsExpression: false
+        jobParameters: null
+        sweepingOutputName: jenkins
+        sweepingOutputScope: PIPELINE
+        timeoutMillis: 600000
     stepsInParallel: false
   - type: COLLECT_ARTIFACT
     name: Collect Artifact
